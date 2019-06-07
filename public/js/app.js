@@ -26,7 +26,9 @@ fetch(url).then((response) => {
 */
 
 function fetchWeather(address) {
-    const url = 'http://localhost:3000/weather?address=' + address
+    // in order to make it compatible for Heroku we make urls relative
+    // to current server root
+    const url = '/weather?address=' + address
     const messageOne = document.querySelector('#message-1')
     const messageTwo = document.querySelector('#message-2')
     messageTwo.textContent = "Fetching weather for " + address

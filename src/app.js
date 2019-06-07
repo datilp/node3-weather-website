@@ -141,7 +141,9 @@ app.get('*', (req, res) => {
 // nodemon src/app.js
 // which will pick up changes in the app.js file
 
-port_no = 3000
+// setting a PORT from the environment variable PORT
+// Heroku sets env PORT for the given app 
+port_no = process.env.PORT || 3000
 app.listen(port_no, () => {
     console.log('Server is upon port ' + port_no)
 })
