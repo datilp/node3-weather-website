@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <!-- move script tag to bottom of script so it 
+          we give time to the html to load b4 the script 
+          starts running.
+          -->
+        <!-- <script src="/js/app.js"></script> -->
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <p>Use this site to get the weather</p>
+            <form>
+                <input placeholder="location">
+                <button>Search</button>
+            </form>
+            <p id='message-1'></p>
+            <p id='message-2'></p>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>
